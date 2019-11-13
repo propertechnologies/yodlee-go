@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	models "yodlee-golang-client/models"
+	models "github.com/propertechnologies/yodlee-go/models"
 )
 
 // GetHoldingsReader is a Reader for the GetHoldings structure.

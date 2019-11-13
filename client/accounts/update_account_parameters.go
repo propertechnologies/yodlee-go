@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	models "yodlee-golang-client/models"
+	models "github.com/propertechnologies/yodlee-go/models"
 )
 
 // NewUpdateAccountParams creates a new UpdateAccountParams object

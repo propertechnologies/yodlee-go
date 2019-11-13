@@ -16,7 +16,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	models "yodlee-golang-client/models"
+	models "github.com/propertechnologies/yodlee-go/models"
 )
 
 // NewRegisterUserParams creates a new RegisterUserParams object

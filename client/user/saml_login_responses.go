@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	models "yodlee-golang-client/models"
+	models "github.com/propertechnologies/yodlee-go/models"
 )
 
 // SamlLoginReader is a Reader for the SamlLogin structure.

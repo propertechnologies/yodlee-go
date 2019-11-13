@@ -11,19 +11,19 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"yodlee-golang-client/client/accounts"
-	"yodlee-golang-client/client/auth"
-	"yodlee-golang-client/client/cobrand"
-	"yodlee-golang-client/client/data_extracts"
-	"yodlee-golang-client/client/derived"
-	"yodlee-golang-client/client/documents"
-	"yodlee-golang-client/client/holdings"
-	"yodlee-golang-client/client/provider_accounts"
-	"yodlee-golang-client/client/providers"
-	"yodlee-golang-client/client/statements"
-	"yodlee-golang-client/client/transactions"
-	"yodlee-golang-client/client/user"
-	"yodlee-golang-client/client/verification"
+	"github.com/propertechnologies/yodlee-go/client/accounts"
+	"github.com/propertechnologies/yodlee-go/client/auth"
+	"github.com/propertechnologies/yodlee-go/client/cobrand"
+	"github.com/propertechnologies/yodlee-go/client/data_extracts"
+	"github.com/propertechnologies/yodlee-go/client/derived"
+	"github.com/propertechnologies/yodlee-go/client/documents"
+	"github.com/propertechnologies/yodlee-go/client/holdings"
+	"github.com/propertechnologies/yodlee-go/client/provider_accounts"
+	"github.com/propertechnologies/yodlee-go/client/providers"
+	"github.com/propertechnologies/yodlee-go/client/statements"
+	"github.com/propertechnologies/yodlee-go/client/transactions"
+	"github.com/propertechnologies/yodlee-go/client/user"
+	"github.com/propertechnologies/yodlee-go/client/verification"
 )
 
 // Default yodlee core a p is HTTP client.
