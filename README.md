@@ -1,6 +1,13 @@
 # yodlee-go
-swagger-go generated yodlee client library for golang with an example of how to use it
+A swagger-go generated Yodlee client library, that is manually fixed so that it compiles, for Golang with an example of how to use it.
 
+## Motivation
+swagger-go generates code from the yodlee swagger spec that does not compile. Additionally, constructing the Yodlee JWS token in Golang
+requires some finess.
+
+## Example usage
+For this to work, you need to set the `YODLEE_SANDBOX_PRIVATE_KEY` and `YODLEE_SANDBOX_ISSUER_ID` environment variables as well as the `<USER_ID>` string
+to variables from your system.
 ```
 package main
 
@@ -39,7 +46,7 @@ func (rt YodleeRoundTripper) RoundTrip(r *http.Request) (*http.Response, error) 
 
 func main() {
 	// This string MUST have newline characters before and after "-----BEGIN PRIVATE KEY------" 
-  // or it won't parse. If you see \n characters in the printf, you didn't export the vars correctly.
+	// or it won't parse. If you see \n characters in the printf, you didn't export the vars correctly.
 	os.Getenv("YODLEE_SANDBOX_PRIVATE_KEY")
 	log.Printf("key = \n%s", k)
 	key := []byte(k)
@@ -68,7 +75,7 @@ func main() {
 	if !ok {
 		panic("Failed to parse key")
 	}
-  // We need to create a custom signer, the default one uses sha256, yodlee uses sha512
+	// We need to create a custom signer, the default one uses sha256, yodlee uses sha512
 	sg := func(data []byte) (sig []byte, err error) {
 		h := sha512.New()
 		h.Write(data)
@@ -78,7 +85,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-  // This endpoint will change depending on environment
+	// This endpoint will change depending on environment
 	t := httptransport.New("sandbox.api.yodlee.com", "/ysl", []string{"https"})
 	var yRoundTripper http.RoundTripper = YodleeRoundTripper{r: http.DefaultTransport}
 	t.Transport = yRoundTripper
